@@ -1,44 +1,44 @@
 # Development Roadmap
 
-## Phase 0 — Project Setup
+## Phase 0 — Project Setup ✅
 > Foundation: scaffolding, tooling, database, auth
 
-- [ ] Initialize Next.js 15 with TypeScript, Tailwind, pnpm
-- [ ] Install and configure shadcn/ui
-- [ ] Set up Supabase project (local or remote)
-- [ ] Configure Drizzle ORM with Supabase Postgres
-- [ ] Define database schema and run initial migration
-- [ ] Implement Supabase Auth (signup, login, logout)
-- [ ] Create authenticated app layout (sidebar + nav)
-- [ ] Set up route groups: `(marketing)` and `(app)`
-- [ ] Configure environment variables and `.env.local`
-- [ ] Set up ESLint + Prettier
+- [x] Initialize Next.js 16 with TypeScript, Tailwind, pnpm
+- [x] Install and configure shadcn/ui
+- [x] Set up Supabase project (local or remote)
+- [x] Configure Drizzle ORM with Supabase Postgres
+- [x] Define database schema and run initial migration
+- [x] Implement Supabase Auth (signup, login, logout)
+- [x] Create authenticated app layout (sidebar + nav)
+- [x] Set up route groups: `(marketing)` and `(app)`
+- [x] Configure environment variables and `.env.local`
+- [x] Set up ESLint + Prettier
 
 ---
 
-## Phase 1 — Core Data Entry
+## Phase 1 — Core Data Entry ✅
 > Let users start building their life story
 
-- [ ] **Eras:** CRUD for life eras (name, dates, summary, traits, lesson)
-- [ ] **Events:** CRUD for life events (all card fields)
-- [ ] **Event ↔ Era linking:** assign events to eras
-- [ ] **Quick-add event flow:** title + date + short note (minimal friction)
-- [ ] **Full event reflection mode:** all fields including impact, beliefs, downstream effects
-- [ ] **Tags system:** freeform tags on events, filterable
-- [ ] **Date flexibility:** support year-only, month-only, and exact dates
+- [x] **Eras:** CRUD for life eras (name, dates, summary, traits, lesson)
+- [x] **Events:** CRUD for life events (all card fields)
+- [x] **Event ↔ Era linking:** assign events to eras
+- [x] **Quick-add event flow:** title + date + short note (minimal friction)
+- [x] **Full event reflection mode:** all fields including impact, beliefs, downstream effects
+- [x] **Tags system:** freeform tags on events, filterable
+- [x] **Date flexibility:** support year-only, month-only, and exact dates
 
 ---
 
-## Phase 2 — Timeline
+## Phase 2 — Timeline ✅
 > The centerpiece visual experience
 
-- [ ] **Timeline view:** horizontal scrollable timeline of all events
-- [ ] **Layer system:** toggle life events, identity, interests, emotions, environment
-- [ ] **Color coding:** by layer type
-- [ ] **Era bars:** visual era spans on the timeline
-- [ ] **Zoom levels:** decade → year → month
-- [ ] **Click-to-expand:** tap any event to see its full card
-- [ ] **Filters:** by layer, era, tags, date range
+- [x] **Timeline view:** horizontal scrollable timeline of all events (column-based layout)
+- [x] **Layer system:** toggle life events, identity, interests, emotions, environment
+- [x] **Color coding:** by layer type (blue, purple, green, amber, teal)
+- [x] **Era bars:** visual era spans on the timeline (absolute-positioned colored bands)
+- [x] **Zoom levels:** decade → year → month
+- [x] **Click-to-expand:** tap any event to see its full card (side sheet with all details)
+- [x] **Filters:** by layer, era, undated event count indicator
 
 ---
 

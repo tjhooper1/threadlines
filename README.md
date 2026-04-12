@@ -49,13 +49,23 @@ Social features are layered in carefully:
 
 ## Project Status
 
-🟡 **Planning Phase** — Architecture and feature specs in progress.
+� **Phase 2 complete** — Working on Phase 3.
 
 See [`/docs`](./docs) for detailed planning documents.
 
+### Completed
+
+- **Phase 0 — Project Setup:** Next.js 16 + TypeScript + Tailwind + shadcn/ui + Supabase Auth + Drizzle ORM + full database schema
+- **Phase 1 — Core Data Entry:** Eras & Events CRUD, quick-add flow, era linking, tags, date precision, dashboard with live data
+- **Phase 2 — Timeline:** Horizontal scrollable timeline with column-based layout, layer system (5 layers with color coding), era bars, zoom levels (decade/year/month), layer & era filtering, click-to-expand event detail sheet
+
 ## Getting Started
 
-_Coming soon — the app hasn't been scaffolded yet._
+```bash
+pnpm install
+cp .env.local.example .env.local  # fill in Supabase credentials
+pnpm dev
+```
 
 ## License
 

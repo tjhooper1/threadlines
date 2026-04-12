@@ -203,6 +203,24 @@ Event ───────── N:M ──────── Person         (v
 |---|---|---|
 | Dashboard | User, current Era, recent Events | IdentitySnapshot (latest), Stats (computed), PersonalityEntry |
 | Timeline | Events (all), Eras (all) | Artifacts (thumbnails), Persons |
+
+### Timeline Architecture
+
+The timeline is a client-side interactive component (`TimelineShell`) that receives server-fetched events and eras.
+
+- **Layout:** Column-based horizontal scrollable grid. Each column represents a time period (decade/year/month).
+- **Zoom levels:** Decade (300px/col), Year (180px/col), Month (140px/col).
+- **Layer system:** 5 layers (life_event, identity, interest, emotion, environment) with independent toggle filters.
+- **Era bars:** Absolute-positioned colored bands spanning from start to end column.
+- **Event detail:** Click opens a right-side Sheet with full event card (description, impact, belief, downstream effects, tags) + edit link.
+- **Filtering:** By active layers, by era (dropdown), undated events excluded with count indicator.
+- **Auto-scroll:** On mount, scrolls to the most recent (rightmost) events.
+
+Key files:
+- `src/components/timeline/timeline-shell.tsx` — Main client component
+- `src/app/(app)/timeline/page.tsx` — Server page (fetches data)
+- Data from `events/actions.ts` (`getEvents`) and `eras/actions.ts` (`getEras`)
+
 | Era Detail | Era, Events in era | Artifacts, PersonalityEntries, CulturalInfluences |
 | Event Detail | Event | Artifacts, linked Events, linked Persons |
 | Identity | IdentitySnapshot (all versions) | — |
