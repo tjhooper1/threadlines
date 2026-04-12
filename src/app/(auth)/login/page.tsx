@@ -33,7 +33,7 @@ export default async function LoginPage({
                             {error}
                         </div>
                     )}
-                    <form className="space-y-4">
+                    <form action={login} className="space-y-4">
                         <div className="space-y-2">
                             <Label htmlFor="email">Email</Label>
                             <Input
@@ -53,7 +53,7 @@ export default async function LoginPage({
                                 required
                             />
                         </div>
-                        <Button formAction={login} className="w-full">
+                        <Button type="submit" className="w-full">
                             Sign in
                         </Button>
                     </form>

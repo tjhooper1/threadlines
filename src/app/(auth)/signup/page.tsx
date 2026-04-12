@@ -33,7 +33,7 @@ export default async function SignupPage({
                             {error}
                         </div>
                     )}
-                    <form className="space-y-4">
+                    <form action={signup} className="space-y-4">
                         <div className="space-y-2">
                             <Label htmlFor="displayName">Display name</Label>
                             <Input
@@ -63,7 +63,7 @@ export default async function SignupPage({
                                 required
                             />
                         </div>
-                        <Button formAction={signup} className="w-full">
+                        <Button type="submit" className="w-full">
                             Create account
                         </Button>
                     </form>

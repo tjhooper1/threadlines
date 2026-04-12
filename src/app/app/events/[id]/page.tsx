@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { Separator } from "@/components/ui/separator";
 import { EventForm } from "@/components/events/event-form";
 import { getEvent } from "../actions";
-import { getEras } from "@/app/(app)/eras/actions";
+import { getEras } from "@/app/app/eras/actions";
 
 export default async function EditEventPage({
     params,

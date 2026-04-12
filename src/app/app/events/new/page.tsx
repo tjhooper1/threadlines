@@ -1,6 +1,6 @@
 import { Separator } from "@/components/ui/separator";
 import { EventForm } from "@/components/events/event-form";
-import { getEras } from "@/app/(app)/eras/actions";
+import { getEras } from "@/app/app/eras/actions";
 
 export default async function NewEventPage() {
     const eraList = await getEras();

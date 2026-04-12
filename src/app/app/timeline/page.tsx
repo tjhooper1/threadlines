@@ -1,6 +1,6 @@
 import { Separator } from "@/components/ui/separator";
-import { getEvents } from "@/app/(app)/events/actions";
-import { getEras } from "@/app/(app)/eras/actions";
+import { getEvents } from "@/app/app/events/actions";
+import { getEras } from "@/app/app/eras/actions";
 import { TimelineShell } from "@/components/timeline/timeline-shell";
 
 export default async function TimelinePage() {

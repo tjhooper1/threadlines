@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { createEra, updateEra } from "@/app/(app)/eras/actions";
+import { createEra, updateEra } from "@/app/app/eras/actions";
 
 type Era = {
     id: string;

@@ -1,7 +1,7 @@
 "use client";
 
 import { format } from "date-fns";
-import { deleteEvent } from "@/app/(app)/events/actions";
+import { deleteEvent } from "@/app/app/events/actions";
 import {
     Card,
     CardContent,

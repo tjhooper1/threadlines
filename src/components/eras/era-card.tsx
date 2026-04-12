@@ -1,7 +1,7 @@
 "use client";
 
 import { format } from "date-fns";
-import { deleteEra } from "@/app/(app)/eras/actions";
+import { deleteEra } from "@/app/app/eras/actions";
 import {
     Card,
     CardContent,
