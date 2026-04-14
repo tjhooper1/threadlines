@@ -224,6 +224,21 @@ Key files:
 | Era Detail | Era, Events in era | Artifacts, PersonalityEntries, CulturalInfluences |
 | Event Detail | Event | Artifacts, linked Events, linked Persons |
 | Identity | IdentitySnapshot (all versions) | — |
+
+### Identity Architecture
+
+- **IdentityEditor** (`src/components/identity/identity-editor.tsx`): Three-column layout (Was/Am/Becoming) with trait tag editors. Supports updating the current snapshot or saving a new version.
+- **SnapshotHistory** (`src/components/identity/snapshot-history.tsx`): Displays previous identity versions with timestamps and trait badges.
+- **TraitListEditor** (`src/components/identity/trait-list-editor.tsx`): Reusable Enter-to-add tag input with Badge display.
+- Server actions in `src/app/app/identity/actions.ts`: `getIdentitySnapshots`, `getLatestIdentitySnapshot`, `createIdentitySnapshot`, `updateIdentitySnapshot`.
+
+### Personality Architecture
+
+- **PersonalityEntryForm** (`src/components/personality/personality-entry-form.tsx`): Dimension select, era select, value input, notes textarea.
+- **PersonalityEntryCard** (`src/components/personality/personality-entry-card.tsx`): Color-coded by dimension (7 colors), shows era name, delete action.
+- Page groups entries by dimension in a grid layout.
+- Server actions in `src/app/app/personality/actions.ts`: `getPersonalityEntries`, `createPersonalityEntry`, `updatePersonalityEntry`, `deletePersonalityEntry`.
+
 | Personality | PersonalityEntry (all) | Eras (for labeling) |
 | Artifacts | Artifacts (all) | Events, Eras (for context) |
 | Influences | CulturalInfluence (all) | Eras (for grouping) |

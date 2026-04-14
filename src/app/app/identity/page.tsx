@@ -1,6 +1,12 @@
 import { Separator } from "@/components/ui/separator";
+import { IdentityEditor } from "@/components/identity/identity-editor";
+import { SnapshotHistory } from "@/components/identity/snapshot-history";
+import { getIdentitySnapshots } from "@/app/app/identity/actions";
 
-export default function IdentityPage() {
+export default async function IdentityPage() {
+    const snapshots = await getIdentitySnapshots();
+    const latest = snapshots[0] ?? null;
+
     return (
         <div className="flex flex-1 flex-col gap-4 p-6">
             <div>
@@ -10,12 +16,9 @@ export default function IdentityPage() {
                 </p>
             </div>
             <Separator />
-            <div className="flex flex-1 items-center justify-center rounded-lg border border-dashed p-8">
-                <p className="text-muted-foreground">
-                    Three columns for your past self, current self, and future self —
-                    editable, versionable, and evolving.
-                </p>
-            </div>
+            <IdentityEditor snapshot={latest} />
+            <Separator />
+            <SnapshotHistory snapshots={snapshots} />
         </div>
     );
 }

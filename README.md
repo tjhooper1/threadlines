@@ -49,7 +49,7 @@ Social features are layered in carefully:
 
 ## Project Status
 
-� **Phase 2 complete** — Working on Phase 3.
+🟢 **Phase 3 complete** — Working on Phase 4.
 
 See [`/docs`](./docs) for detailed planning documents.
 
@@ -58,6 +58,7 @@ See [`/docs`](./docs) for detailed planning documents.
 - **Phase 0 — Project Setup:** Next.js 16 + TypeScript + Tailwind + shadcn/ui + Supabase Auth + Drizzle ORM + full database schema
 - **Phase 1 — Core Data Entry:** Eras & Events CRUD, quick-add flow, era linking, tags, date precision, dashboard with live data
 - **Phase 2 — Timeline:** Horizontal scrollable timeline with column-based layout, layer system (5 layers with color coding), era bars, zoom levels (decade/year/month), layer & era filtering, click-to-expand event detail sheet
+- **Phase 3 — Identity & Personality:** Three-column identity editor (Was/Am/Becoming) with versionable snapshots, personality dimension tracker (7 dimensions) grouped by type with era linking
 
 ## Getting Started
 

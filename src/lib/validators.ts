@@ -49,3 +49,55 @@ export const updateEventSchema = createEventSchema.partial().extend({
 
 export type CreateEventInput = z.infer<typeof createEventSchema>;
 export type UpdateEventInput = z.infer<typeof updateEventSchema>;
+
+// ── Identity Snapshots ──────────────────────────────────────────────────────
+
+export const createIdentitySnapshotSchema = z.object({
+    pastSelf: z.array(z.string()).default([]),
+    currentSelf: z.array(z.string()).default([]),
+    futureSelf: z.array(z.string()).default([]),
+    notes: z.string().optional(),
+});
+
+export const updateIdentitySnapshotSchema =
+    createIdentitySnapshotSchema.partial().extend({
+        id: z.string().uuid(),
+    });
+
+export type CreateIdentitySnapshotInput = z.infer<
+    typeof createIdentitySnapshotSchema
+>;
+export type UpdateIdentitySnapshotInput = z.infer<
+    typeof updateIdentitySnapshotSchema
+>;
+
+// ── Personality Entries ─────────────────────────────────────────────────────
+
+export const personalityDimensionValues = [
+    "confidence",
+    "introversion",
+    "values",
+    "triggers",
+    "motivations",
+    "strengths",
+    "sabotage",
+] as const;
+
+export const createPersonalityEntrySchema = z.object({
+    eraId: z.string().uuid().optional().nullable(),
+    dimension: z.enum(personalityDimensionValues),
+    value: z.string().min(1, "Value is required"),
+    notes: z.string().optional(),
+});
+
+export const updatePersonalityEntrySchema =
+    createPersonalityEntrySchema.partial().extend({
+        id: z.string().uuid(),
+    });
+
+export type CreatePersonalityEntryInput = z.infer<
+    typeof createPersonalityEntrySchema
+>;
+export type UpdatePersonalityEntryInput = z.infer<
+    typeof updatePersonalityEntrySchema
+>;

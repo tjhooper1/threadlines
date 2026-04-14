@@ -42,14 +42,14 @@
 
 ---
 
-## Phase 3 — Identity & Personality
+## Phase 3 — Identity & Personality ✅
 > Self-understanding features
 
-- [ ] **Identity screen:** "Who I Was / Am / Becoming" with editable cards
-- [ ] **Identity snapshots:** save versions over time
-- [ ] **Personality entries:** per-era ratings on dimensions (confidence, introversion, values, etc.)
-- [ ] **Personality visualization:** line chart or heatmap over time
-- [ ] **Values tracker:** core values per era
+- [x] **Identity screen:** "Who I Was / Am / Becoming" with three-column editable cards (amber/blue/emerald)
+- [x] **Identity snapshots:** save and update versions, view snapshot history with timestamps
+- [x] **Personality entries:** per-era entries on 7 dimensions (confidence, introversion, values, triggers, motivations, strengths, self-sabotage)
+- [x] **Personality cards:** color-coded by dimension, grouped view, era linking, delete support
+- [x] **Values tracker:** covered via personality entries with values dimension + era association
 
 ---
 
