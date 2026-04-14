@@ -270,3 +270,12 @@ Key files:
 - Stats page (`src/app/app/stats/page.tsx`): 6 overview counter cards, 3 highlight cards (timeline span, current era, longest era), breakdown cards (events by layer, events by era, top tags, influences by category, artifacts by type).
 | Stats | Events, Eras, Persons, Artifacts | Computed aggregations |
 | AI Summary | Events, Eras, IdentitySnapshot, PersonalityEntry | All (for context) |
+
+### AI Summary Architecture
+
+- **OpenAI client** (`src/lib/ai/openai.ts`): Singleton OpenAI client using `OPENAI_API_KEY` env var.
+- **gatherLifeContext** (`src/app/app/summary/actions.ts`): Builds a markdown context string from all user data — eras, events (up to 50), latest identity snapshot, personality entries, and cultural influences.
+- **generateLifeSummary** (`src/app/app/summary/actions.ts`): Server action. Accepts tone (`reflective | factual | storytelling`), each with a distinct system prompt. Calls GPT-4o with max 2000 tokens. Returns generated narrative text.
+- **generateReflectionPrompts** (`src/app/app/summary/actions.ts`): Server action. Generates 5 personalized reflection questions as a JSON array. Uses GPT-4o with JSON-focused system prompt and fallback line-by-line parsing.
+- **SummaryGenerator** (`src/components/summary/summary-generator.tsx`): Client component — tone selector (3 cards), generate/regenerate button, loading state, summary display with copy-to-clipboard and download-as-.txt actions.
+- **GuidedPrompts** (`src/components/summary/guided-prompts.tsx`): Client component — generate/refresh button, numbered prompt list. Displayed on both the summary page and the dashboard.

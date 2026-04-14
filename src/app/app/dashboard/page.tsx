@@ -29,6 +29,7 @@ import {
     culturalInfluences,
 } from "@/lib/db/schema";
 import { createClient } from "@/lib/supabase/server";
+import { GuidedPrompts } from "@/components/summary/guided-prompts";
 
 const PROMPTS = [
     "What's a belief you held five years ago that you've since let go of?",
@@ -148,6 +149,9 @@ export default async function DashboardPage() {
                     </p>
                 </CardContent>
             </Card>
+
+            {/* AI reflection prompts */}
+            <GuidedPrompts />
 
             {/* Stats row */}
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">

@@ -49,7 +49,7 @@ Social features are layered in carefully:
 
 ## Project Status
 
-🟢 **Phase 5 complete** — Working on Phase 6.
+🟢 **Phase 6 complete** — Working on Phase 7.
 
 See [`/docs`](./docs) for detailed planning documents.
 
@@ -61,6 +61,7 @@ See [`/docs`](./docs) for detailed planning documents.
 - **Phase 3 — Identity & Personality:** Three-column identity editor (Was/Am/Becoming) with versionable snapshots, personality dimension tracker (7 dimensions) grouped by type with era linking
 - **Phase 4 — Artifacts & Influences:** File uploads via Supabase Storage (10MB limit, photo/video/audio/document/screenshot), external links & playlists, artifact gallery with type & era filtering, cultural influences CRUD (10 categories) with grid & mosaic views, era linking, image support
 - **Phase 5 — Dashboard & Stats:** Enhanced dashboard with identity snapshot, prompt of the day, 5 stat cards (eras, events, artifacts, influences, quick-add), life stats page with auto-computed metrics (timeline span, longest era, events by layer/era, top tags, influences by category, artifacts by type)
+- **Phase 6 — AI Features:** AI-powered life summary generator with 3 tones (reflective, factual, storytelling), regenerate on demand, copy & download as .txt, AI-driven personalized reflection prompts on dashboard and summary page
 
 ## Getting Started
 

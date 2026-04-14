@@ -75,14 +75,14 @@
 
 ---
 
-## Phase 6 — AI Features
+## Phase 6 — AI Features ✅
 > Intelligence layer
 
-- [ ] **AI life summary:** generate narrative from all user data
-- [ ] **Tone selection:** reflective, factual, storytelling
-- [ ] **Regenerate on demand**
-- [ ] **Guided prompts:** AI-powered reflection questions based on existing data
-- [ ] **Export summary:** PDF or text download
+- [x] **AI life summary:** generate narrative from all user data via OpenAI GPT-4o
+- [x] **Tone selection:** reflective, factual, storytelling
+- [x] **Regenerate on demand**
+- [x] **Guided prompts:** AI-powered reflection questions based on existing data (dashboard + summary page)
+- [x] **Export summary:** download as .txt, copy to clipboard
 
 ---
 
