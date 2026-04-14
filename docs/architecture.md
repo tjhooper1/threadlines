@@ -242,5 +242,20 @@ Key files:
 | Personality | PersonalityEntry (all) | Eras (for labeling) |
 | Artifacts | Artifacts (all) | Events, Eras (for context) |
 | Influences | CulturalInfluence (all) | Eras (for grouping) |
+
+### Artifacts Architecture
+
+- **ArtifactForm** (`src/components/artifacts/artifact-form.tsx`): Type select (8 types), file upload for media types (photo/video/audio/document/screenshot) via Supabase Storage, URL input for link types, caption, date, era & event linking.
+- **ArtifactCard** (`src/components/artifacts/artifact-card.tsx`): Type-specific icons and colors, image preview for photos/screenshots, external link display, era & event badges, delete action.
+- **ArtifactGallery** (`src/components/artifacts/artifact-gallery.tsx`): Inline add form toggle, type filter, era filter, responsive grid layout, count indicator.
+- File uploads go to Supabase Storage bucket `artifacts` under `{userId}/{timestamp}-{uuid}.{ext}`, 10MB limit.
+- Server actions in `src/app/app/artifacts/actions.ts`: `getArtifacts` (with joins), `getArtifact`, `uploadArtifactFile`, `createArtifact`, `updateArtifact`, `deleteArtifact` (cleans up storage).
+
+### Influences Architecture
+
+- **InfluenceForm** (`src/components/influences/influence-form.tsx`): Category select (10 categories), name, era linking, age/year, "why it mattered" textarea, optional image URL.
+- **InfluenceCard** (`src/components/influences/influence-card.tsx`): Category-specific icons and background colors, image display, era badge, delete action.
+- **InfluenceGrid** (`src/components/influences/influence-grid.tsx`): Grid view (flat) and mosaic view (grouped by category), category & era filters, inline add form, view mode toggle.
+- Server actions in `src/app/app/influences/actions.ts`: `getInfluences` (with era join), `getInfluence`, `createInfluence`, `updateInfluence`, `deleteInfluence`.
 | Stats | Events, Eras, Persons, Artifacts | Computed aggregations |
 | AI Summary | Events, Eras, IdentitySnapshot, PersonalityEntry | All (for context) |

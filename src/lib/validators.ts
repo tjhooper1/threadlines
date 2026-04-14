@@ -101,3 +101,63 @@ export type CreatePersonalityEntryInput = z.infer<
 export type UpdatePersonalityEntryInput = z.infer<
     typeof updatePersonalityEntrySchema
 >;
+
+// ── Artifacts ───────────────────────────────────────────────────────────────
+
+export const artifactTypeValues = [
+    "photo",
+    "video",
+    "audio",
+    "document",
+    "screenshot",
+    "text",
+    "link",
+    "playlist",
+] as const;
+
+export const createArtifactSchema = z.object({
+    type: z.enum(artifactTypeValues),
+    url: z.string().min(1, "URL is required"),
+    caption: z.string().optional(),
+    date: z.string().optional(),
+    eventId: z.string().uuid().optional().nullable(),
+    eraId: z.string().uuid().optional().nullable(),
+});
+
+export const updateArtifactSchema = createArtifactSchema.partial().extend({
+    id: z.string().uuid(),
+});
+
+export type CreateArtifactInput = z.infer<typeof createArtifactSchema>;
+export type UpdateArtifactInput = z.infer<typeof updateArtifactSchema>;
+
+// ── Cultural Influences ─────────────────────────────────────────────────────
+
+export const influenceCategoryValues = [
+    "song",
+    "show",
+    "game",
+    "book",
+    "place",
+    "internet",
+    "trend",
+    "family",
+    "community",
+    "subculture",
+] as const;
+
+export const createInfluenceSchema = z.object({
+    category: z.enum(influenceCategoryValues),
+    name: z.string().min(1, "Name is required"),
+    eraId: z.string().uuid().optional().nullable(),
+    ageOrYear: z.string().optional(),
+    whyItMattered: z.string().optional(),
+    imageUrl: z.string().optional(),
+});
+
+export const updateInfluenceSchema = createInfluenceSchema.partial().extend({
+    id: z.string().uuid(),
+});
+
+export type CreateInfluenceInput = z.infer<typeof createInfluenceSchema>;
+export type UpdateInfluenceInput = z.infer<typeof updateInfluenceSchema>;

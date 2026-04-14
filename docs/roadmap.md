@@ -53,15 +53,15 @@
 
 ---
 
-## Phase 4 — Artifacts & Influences
+## Phase 4 — Artifacts & Influences ✅
 > Make it real and tangible
 
-- [ ] **Artifact uploads:** photos, documents, audio via Supabase Storage
-- [ ] **Artifact linking:** attach to events, eras, or standalone
-- [ ] **Artifact gallery:** filterable grid view
-- [ ] **External links:** URLs, playlist links, social post links
-- [ ] **Cultural influences:** CRUD with category, era, and "why it mattered"
-- [ ] **Influence grid:** visual mosaic display
+- [x] **Artifact uploads:** photos, documents, audio via Supabase Storage (10MB limit)
+- [x] **Artifact linking:** attach to events, eras, or standalone
+- [x] **Artifact gallery:** filterable grid view with type & era filters, image previews
+- [x] **External links:** URLs, playlist links, social post links
+- [x] **Cultural influences:** CRUD with 10 categories, era linking, "why it mattered", image URL
+- [x] **Influence grid:** grid & mosaic (grouped by category) views with filtering
 
 ---
 

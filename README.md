@@ -49,7 +49,7 @@ Social features are layered in carefully:
 
 ## Project Status
 
-🟢 **Phase 3 complete** — Working on Phase 4.
+🟢 **Phase 4 complete** — Working on Phase 5.
 
 See [`/docs`](./docs) for detailed planning documents.
 
@@ -59,6 +59,7 @@ See [`/docs`](./docs) for detailed planning documents.
 - **Phase 1 — Core Data Entry:** Eras & Events CRUD, quick-add flow, era linking, tags, date precision, dashboard with live data
 - **Phase 2 — Timeline:** Horizontal scrollable timeline with column-based layout, layer system (5 layers with color coding), era bars, zoom levels (decade/year/month), layer & era filtering, click-to-expand event detail sheet
 - **Phase 3 — Identity & Personality:** Three-column identity editor (Was/Am/Becoming) with versionable snapshots, personality dimension tracker (7 dimensions) grouped by type with era linking
+- **Phase 4 — Artifacts & Influences:** File uploads via Supabase Storage (10MB limit, photo/video/audio/document/screenshot), external links & playlists, artifact gallery with type & era filtering, cultural influences CRUD (10 categories) with grid & mosaic views, era linking, image support
 
 ## Getting Started
 
