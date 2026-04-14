@@ -65,13 +65,13 @@
 
 ---
 
-## Phase 5 — Dashboard & Stats
+## Phase 5 — Dashboard & Stats ✅
 > The home screen and fun metrics
 
-- [ ] **Life dashboard:** current identity, active era, recent events, prompt of the day
-- [ ] **Life stats:** auto-computed where possible (cities, jobs, years in relationships, etc.)
-- [ ] **Manual stats:** user-entered where auto-compute isn't feasible
-- [ ] **Stats display:** dashboard-style cards
+- [x] **Life dashboard:** current identity snapshot, active era, recent events, prompt of the day (20 rotating prompts), 5 stat cards
+- [x] **Life stats:** auto-computed — timeline span, longest era, events by layer, events by era, top tags, influences by category, artifacts by type, personality dimension coverage
+- [x] **Manual stats:** deferred — auto-computed stats cover the initial use cases
+- [x] **Stats display:** dashboard-style cards with counts, breakdowns, and highlights
 
 ---
 

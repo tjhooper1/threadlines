@@ -257,5 +257,16 @@ Key files:
 - **InfluenceCard** (`src/components/influences/influence-card.tsx`): Category-specific icons and background colors, image display, era badge, delete action.
 - **InfluenceGrid** (`src/components/influences/influence-grid.tsx`): Grid view (flat) and mosaic view (grouped by category), category & era filters, inline add form, view mode toggle.
 - Server actions in `src/app/app/influences/actions.ts`: `getInfluences` (with era join), `getInfluence`, `createInfluence`, `updateInfluence`, `deleteInfluence`.
+
+### Dashboard Architecture
+
+- Server component at `src/app/app/dashboard/page.tsx` fetches all data in parallel: eras, recent events, event/artifact/influence counts, latest identity snapshot, personality entries.
+- Shows: prompt of the day (20 rotating prompts, index based on day-of-year), 5 stat cards (eras, events, artifacts, influences, quick-add), current identity snapshot (Was/Am/Becoming badges), recent events list, eras grid.
+- Prompt system is static — will be replaced by AI-powered prompts in Phase 6.
+
+### Stats Architecture
+
+- **getLifeStats** (`src/app/app/stats/actions.ts`): Server action that computes all stats in a single call. Queries all tables, computes: total counts (6), current era, longest era (by days), timeline span (earliest→latest event), events by layer, events by era, top 10 tags, influences by category, artifacts by type, personality dimension coverage.
+- Stats page (`src/app/app/stats/page.tsx`): 6 overview counter cards, 3 highlight cards (timeline span, current era, longest era), breakdown cards (events by layer, events by era, top tags, influences by category, artifacts by type).
 | Stats | Events, Eras, Persons, Artifacts | Computed aggregations |
 | AI Summary | Events, Eras, IdentitySnapshot, PersonalityEntry | All (for context) |
