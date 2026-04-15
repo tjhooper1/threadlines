@@ -89,13 +89,13 @@ export function EventCard({ data }: { data: EventWithEra }) {
                     </CardDescription>
                 </div>
                 <div className="flex gap-1">
-                    <Button variant="ghost" size="icon-xs" render={<Link href={`/app/events/${event.id}`} />}>
-                        <Pencil />
+                    <Button variant="ghost" size="icon-sm" render={<Link href={`/app/events/${event.id}`} />}>
+                        <Pencil className="h-5 w-5" />
                     </Button>
                     <form action={deleteEvent}>
                         <input type="hidden" name="id" value={event.id} />
-                        <Button variant="ghost" size="icon-xs" type="submit">
-                            <Trash2 className="text-destructive" />
+                        <Button variant="ghost" size="icon-sm" type="submit">
+                            <Trash2 className="h-5 w-5 text-destructive" />
                         </Button>
                     </form>
                 </div>

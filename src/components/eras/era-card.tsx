@@ -47,13 +47,13 @@ export function EraCard({ era }: { era: Era }) {
                     )}
                 </div>
                 <div className="flex gap-1">
-                    <Button variant="ghost" size="icon-xs" render={<Link href={`/app/eras/${era.id}`} />}>
-                        <Pencil />
+                    <Button variant="ghost" size="icon-sm" render={<Link href={`/app/eras/${era.id}`} />}>
+                        <Pencil className="h-5 w-5" />
                     </Button>
                     <form action={deleteEra}>
                         <input type="hidden" name="id" value={era.id} />
-                        <Button variant="ghost" size="icon-xs" type="submit">
-                            <Trash2 className="text-destructive" />
+                        <Button variant="ghost" size="icon-sm" type="submit">
+                            <Trash2 className="h-5 w-5 text-destructive" />
                         </Button>
                     </form>
                 </div>

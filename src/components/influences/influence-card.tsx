@@ -148,11 +148,11 @@ export function InfluenceCard({ data }: { data: InfluenceWithEra }) {
                     <input type="hidden" name="id" value={influence.id} />
                     <Button
                         variant="ghost"
-                        size="icon"
-                        className="h-7 w-7 opacity-0 transition-opacity group-hover:opacity-100"
+                        size="icon-sm"
+                        className="opacity-0 transition-opacity group-hover:opacity-100"
                         type="submit"
                     >
-                        <Trash2 className="h-3.5 w-3.5 text-destructive" />
+                        <Trash2 className="h-5 w-5 text-destructive" />
                     </Button>
                 </form>
             </CardHeader>

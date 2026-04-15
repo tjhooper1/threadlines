@@ -367,8 +367,8 @@ export function TimelineShell({
                                 key={layer}
                                 onClick={() => toggleLayer(layer)}
                                 className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-medium transition-all ${active
-                                        ? `${config.bg} ${config.color}`
-                                        : "border-transparent bg-muted/50 text-muted-foreground opacity-50"
+                                    ? `${config.bg} ${config.color}`
+                                    : "border-transparent bg-muted/50 text-muted-foreground opacity-50"
                                     }`}
                             >
                                 <span
@@ -407,7 +407,7 @@ export function TimelineShell({
             {/* Timeline */}
             <div
                 ref={scrollRef}
-                className="flex-1 overflow-x-auto rounded-lg border bg-background"
+                className="relative isolate flex-1 overflow-x-auto rounded-lg border bg-background"
             >
                 <div style={{ minWidth: totalWidth }} className="relative">
                     {/* Column headers */}
@@ -524,10 +524,10 @@ export function TimelineShell({
                                     {selectedEvent.event.layer && (
                                         <span
                                             className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium ${LAYER_CONFIG[
-                                                    (selectedEvent.event
-                                                        .layer as LayerType) ||
-                                                    "life_event"
-                                                ].bg
+                                                (selectedEvent.event
+                                                    .layer as LayerType) ||
+                                                "life_event"
+                                            ].bg
                                                 } ${LAYER_CONFIG[
                                                     (selectedEvent.event
                                                         .layer as LayerType) ||

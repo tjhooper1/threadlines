@@ -84,8 +84,8 @@ export function PersonalityEntryCard({ data }: { data: EntryWithEra }) {
                 </div>
                 <form action={deletePersonalityEntry}>
                     <input type="hidden" name="id" value={entry.id} />
-                    <Button variant="ghost" size="icon-xs" type="submit">
-                        <Trash2 className="text-destructive" />
+                    <Button variant="ghost" size="icon-sm" type="submit">
+                        <Trash2 className="h-5 w-5 text-destructive" />
                     </Button>
                 </form>
             </CardHeader>
